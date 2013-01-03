@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CFF27B316964EED003F0CA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF27B216964EED003F0CA5 /* UIKit.framework */; };
+		2CFF27B516964EED003F0CA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF27B416964EED003F0CA5 /* Foundation.framework */; };
+		2CFF27B716964EED003F0CA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF27B616964EED003F0CA5 /* CoreGraphics.framework */; };
+		2CFF27BD16964EED003F0CA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF27BB16964EED003F0CA5 /* InfoPlist.strings */; };
+		2CFF27BF16964EEE003F0CA5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27BE16964EED003F0CA5 /* main.m */; };
+		2CFF27C316964EEE003F0CA5 /* PlanetViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27C216964EEE003F0CA5 /* PlanetViewAppDelegate.m */; };
+		2CFF27C616964EEE003F0CA5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF27C416964EEE003F0CA5 /* MainStoryboard.storyboard */; };
+		2CFF27C916964EEE003F0CA5 /* PlanetViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27C816964EEE003F0CA5 /* PlanetViewViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2CFF27AE16964EED003F0CA5 /* Panoramio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panoramio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFF27B216964EED003F0CA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2CFF27B416964EED003F0CA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2CFF27B616964EED003F0CA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2CFF27BA16964EED003F0CA5 /* Panoramio-Info.plist */ = {isa = PBXFileReference; path = "Panoramio-Info.plist"; sourceTree = "<group>"; };
+		2CFF27BC16964EED003F0CA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CFF27BE16964EED003F0CA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CFF27C016964EEE003F0CA5 /* Panoramio-Prefix.pch */ = {isa = PBXFileReference; path = "Panoramio-Prefix.pch"; sourceTree = "<group>"; };
+		2CFF27C116964EEE003F0CA5 /* PlanetViewAppDelegate.h */ = {isa = PBXFileReference; path = PlanetViewAppDelegate.h; sourceTree = "<group>"; };
+		2CFF27C216964EEE003F0CA5 /* PlanetViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetViewAppDelegate.m; sourceTree = "<group>"; };
+		2CFF27C516964EEE003F0CA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		2CFF27C716964EEE003F0CA5 /* PlanetViewViewController.h */ = {isa = PBXFileReference; path = PlanetViewViewController.h; sourceTree = "<group>"; };
+		2CFF27C816964EEE003F0CA5 /* PlanetViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetViewViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CFF27AB16964EED003F0CA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFF27B316964EED003F0CA5 /* UIKit.framework in Frameworks */,
+				2CFF27B516964EED003F0CA5 /* Foundation.framework in Frameworks */,
+				2CFF27B716964EED003F0CA5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CFF27A316964EED003F0CA5 = {
+			isa = PBXGroup;
+			children = (
+				2CFF27B816964EED003F0CA5 /* Panoramio */,
+				2CFF27B116964EED003F0CA5 /* Frameworks */,
+				2CFF27AF16964EED003F0CA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CFF27AF16964EED003F0CA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF27AE16964EED003F0CA5 /* Panoramio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CFF27B116964EED003F0CA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF27B216964EED003F0CA5 /* UIKit.framework */,
+				2CFF27B416964EED003F0CA5 /* Foundation.framework */,
+				2CFF27B616964EED003F0CA5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CFF27B816964EED003F0CA5 /* Panoramio */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF27C116964EEE003F0CA5 /* PlanetViewAppDelegate.h */,
+				2CFF27C216964EEE003F0CA5 /* PlanetViewAppDelegate.m */,
+				2CFF27C416964EEE003F0CA5 /* MainStoryboard.storyboard */,
+				2CFF27C716964EEE003F0CA5 /* PlanetViewViewController.h */,
+				2CFF27C816964EEE003F0CA5 /* PlanetViewViewController.m */,
+				2CFF27B916964EED003F0CA5 /* Supporting Files */,
+			);
+			path = Panoramio;
+			sourceTree = "<group>";
+		};
+		2CFF27B916964EED003F0CA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CFF27BA16964EED003F0CA5 /* Panoramio-Info.plist */,
+				2CFF27BB16964EED003F0CA5 /* InfoPlist.strings */,
+				2CFF27BE16964EED003F0CA5 /* main.m */,
+				2CFF27C016964EEE003F0CA5 /* Panoramio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CFF27AD16964EED003F0CA5 /* Panoramio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CFF27CC16964EEE003F0CA5 /* Build configuration list for PBXNativeTarget "Panoramio" */;
+			buildPhases = (
+				2CFF27AA16964EED003F0CA5 /* Sources */,
+				2CFF27AB16964EED003F0CA5 /* Frameworks */,
+				2CFF27AC16964EED003F0CA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Panoramio;
+			productName = Panoramio;
+			productReference = 2CFF27AE16964EED003F0CA5 /* Panoramio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CFF27A516964EED003F0CA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PlanetView;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 2CFF27A816964EED003F0CA5 /* Build configuration list for PBXProject "Panoramio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2CFF27A316964EED003F0CA5;
+			productRefGroup = 2CFF27AF16964EED003F0CA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CFF27AD16964EED003F0CA5 /* Panoramio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CFF27AC16964EED003F0CA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFF27BD16964EED003F0CA5 /* InfoPlist.strings in Resources */,
+				2CFF27C616964EEE003F0CA5 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CFF27AA16964EED003F0CA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFF27BF16964EEE003F0CA5 /* main.m in Sources */,
+				2CFF27C316964EEE003F0CA5 /* PlanetViewAppDelegate.m in Sources */,
+				2CFF27C916964EEE003F0CA5 /* PlanetViewViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CFF27BB16964EED003F0CA5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CFF27BC16964EED003F0CA5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2CFF27C416964EEE003F0CA5 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CFF27C516964EEE003F0CA5 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CFF27CA16964EEE003F0CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2CFF27CB16964EEE003F0CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CFF27CD16964EEE003F0CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Panoramio/Panoramio-Prefix.pch";
+				INFOPLIST_FILE = "Panoramio/Panoramio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2CFF27CE16964EEE003F0CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Panoramio/Panoramio-Prefix.pch";
+				INFOPLIST_FILE = "Panoramio/Panoramio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CFF27A816964EED003F0CA5 /* Build configuration list for PBXProject "Panoramio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFF27CA16964EEE003F0CA5 /* Debug */,
+				2CFF27CB16964EEE003F0CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CFF27CC16964EEE003F0CA5 /* Build configuration list for PBXNativeTarget "Panoramio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFF27CD16964EEE003F0CA5 /* Debug */,
+				2CFF27CE16964EEE003F0CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CFF27A516964EED003F0CA5 /* Project object */;
+}
