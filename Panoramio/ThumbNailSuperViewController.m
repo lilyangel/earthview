@@ -13,6 +13,7 @@
 #import "LocalImageManager.h"
 #import <malloc/malloc.h>
 #import "GlobalConfiguration.h"
+#import "FullSizePhotoViewController.h"
 
 @interface ThumbNailSuperViewController ()
 @property PlanetViewAppDelegate *pvDelegate;
@@ -31,6 +32,7 @@
 @property (nonatomic) NSMutableData *receivedData;
 @property (nonatomic) NSURLConnection *connection;
 @property NSInteger pagePhotoCount;
+
 @end
 
 @implementation ThumbNailSuperViewController
@@ -103,17 +105,25 @@
     if (photoIndex < [[_fetchedResultsController fetchedObjects] count]) {
         PhotoInfo *photoInfo = [_fetchedResultsController objectAtIndexPath:indexPath];
         self.photoId = photoInfo.photoId;
-        [self performSegueWithIdentifier:@"showPhotoDetail" sender:self];
+        //[self performSegueWithIdentifier:@"showPhotoDetail" sender:self];
+        self.currentPhotoIndex = photoIndex;
+        [self performSegueWithIdentifier:@"showFullPhoto" sender:self];
+        
     }
 }
 
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"showPhotoDetail"]) {
-        ShowLocationViewController *photoVC = segue.destinationViewController;
-        photoVC.currentPhotoIndex = self.currentPhotoIndex;
-        photoVC.photoId = self.photoId;
+ //   if ([segue.identifier isEqualToString:@"showPhotoDetail"]) {
+    if ([segue.identifier isEqualToString:@"showFullPhoto"]) {
+//
+//        ShowLocationViewController *photoVC = segue.destinationViewController;
+//        photoVC.currentPhotoIndex = self.currentPhotoIndex;
+//        photoVC.photoId = self.photoId;
+        FullSizePhotoViewController *fsPhotoVC = segue.destinationViewController;
+        fsPhotoVC.fetchedResultsController = _fetchedResultsController;
+        fsPhotoVC.photoIndex = self.currentPhotoIndex;
     }
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -343,10 +353,13 @@
     }else{
         NSLog(@"No image View");
     }
-    
     [_imageSet removeObjectForKey:connection.description];
     [self setConnection: nil];
     
 }
 
+-(void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 @end

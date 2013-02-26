@@ -2,7 +2,7 @@
 //  PhotoInfo.m
 //  Panoramio
 //
-//  Created by lily on 2/10/13.
+//  Created by lily on 2/23/13.
 //
 //
 
@@ -12,6 +12,7 @@
 
 @implementation PhotoInfo
 
+@dynamic imageData;
 @dynamic isFavorite;
 @dynamic latitude;
 @dynamic location;
@@ -20,7 +21,7 @@
 @dynamic position;
 @dynamic userId;
 @dynamic userName;
-@dynamic imageData;
+@dynamic order;
 @dynamic whomtook;
 
 @end

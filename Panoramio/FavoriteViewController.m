@@ -48,7 +48,7 @@
         [subImageView removeFromSuperview];
     }
     [super setScrollView: _scrollView];
-    [super printPhotoWithPageIndex:0];
+//    [super printPhotoWithPageIndex:0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,22 +67,35 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    //int test = [[fetchedResultsController fetchedObjects] count];
     [super setFetchedResultsController: fetchedResultsController];
 }
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    if (tabBarController.selectedIndex == 3) {
-        self.isEnd = NO;
-        NSArray *imageSubviews = _scrollView.subviews;
-        for (UIView *subImageView in imageSubviews) {
-//            if (subImageView.frame.size.height == [super imageHight]) {
-                [subImageView removeFromSuperview];
-//            }
-        }
-        [self fetchPhotoData];
-        [super printPhotoWithPageIndex:0];
+//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+//    if (tabBarController.selectedIndex == 3) {
+//        self.isEnd = NO;
+//        NSArray *imageSubviews = _scrollView.subviews;
+//        for (UIView *subImageView in imageSubviews) {
+////            if (subImageView.frame.size.height == [super imageHight]) {
+//                [subImageView removeFromSuperview];
+////            }
+//        }
+//        [self fetchPhotoData];
+//        [super printPhotoWithPageIndex:0];
+//    }
+//}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.isEnd = NO;
+    NSArray *imageSubviews = _scrollView.subviews;
+    for (UIView *subImageView in imageSubviews) {
+        //            if (subImageView.frame.size.height == [super imageHight]) {
+        [subImageView removeFromSuperview];
+        //            }
     }
+    [self fetchPhotoData];
+    [super printPhotoWithPageIndex:0];
 }
 
 @end

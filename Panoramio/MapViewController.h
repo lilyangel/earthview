@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController<MKMapViewDelegate, UIGestureRecognizerDelegate>
-
+@interface MapViewController : UIViewController<MKMapViewDelegate, UIGestureRecognizerDelegate, UITabBarControllerDelegate>
+@property NSString *photoId;
 @end

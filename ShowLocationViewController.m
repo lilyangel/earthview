@@ -9,9 +9,10 @@
 #import "ShowLocationViewController.h"
 #import "FetchPhotoResult.h"
 #import "pointAnnotation.h"
-#import "PhotoViewController.h"
 #import "LocalImageManager.h"
 #import "GlobalConfiguration.h"
+#import "FullSizePhotoViewController.h"
+
 @interface ShowLocationViewController (){
     UIImageView* _zoomView;
     CGSize _imageSize;
@@ -32,13 +33,13 @@
 @property NSInteger pageIndex;
 @property NSInteger currentDisplayPhoto;
 @property float scrollBeginOffset;
-
 @property (nonatomic) UITapGestureRecognizer *imageTap;
 @property (nonatomic) pointAnnotation *pointAnnt;
 @property Boolean currentPhotoIsFavorite;
 @property (nonatomic) NSURLConnection *connection;
 @property (nonatomic) NSMutableDictionary *imageSet;
 @property (nonatomic) NSMutableData *receivedData;
+@property (nonatomic) float scrollViewHight;
 @end
 
 @implementation ShowLocationViewController
@@ -58,6 +59,8 @@
 @synthesize connection = _connection;
 @synthesize imageSet = _imageSet;
 @synthesize receivedData = _receivedData;
+@synthesize scrollViewHight = _scrollViewHight;
+
 - (void) updateMapView{
     if (self.mapView.annotations)
         [self.mapView removeAnnotations: self.mapView.annotations];
@@ -87,6 +90,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _scrollViewHight = self.scrollView.bounds.size.height - self.tabBarController.tabBar.bounds.size.height;
     self.mapView.delegate = self;
     self.mapViewSpan = 50;
     _imageSet = [[NSMutableDictionary alloc] init];
@@ -121,6 +125,7 @@
     }
     [_scrollView addSubview:_zoomView];
     [_scrollView setContentSize:CGSizeMake(320*(_pageIndex+1), _scrollView.frame.size.height)];
+    [_scrollView setContentSize:CGSizeMake(320*2000, _scrollView.frame.size.height)];
     self.offsetX = 0.0;
     [self updateMapInfo];
     
@@ -131,15 +136,15 @@
 
 -(void)handlePhotoTap: (UIGestureRecognizer*) gesture
 {
-    [self performSegueWithIdentifier:@"ShowPhoto" sender:self];
+    [self performSegueWithIdentifier:@"showFullPhoto" sender:self];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"ShowPhoto"]) {
-        PhotoViewController *photoVC = segue.destinationViewController;
-        photoVC.photoId = _photoId;
-        photoVC.isFavorite = self.currentPhotoIsFavorite;
+    if ([segue.identifier isEqualToString:@"showFullPhoto"]) {
+        FullSizePhotoViewController *fsPhotoVC = segue.destinationViewController;
+        fsPhotoVC.photoIndex = _currentDisplayPhoto;
+        fsPhotoVC.fetchedResultsController = _fetchedResultsController;
     }
 }
 
@@ -172,19 +177,6 @@
         [self displayImage:[UIImage imageWithData:getLocalData] withPageIndex: photoIndex];
     }else{
         NSString *urlString = [NSString stringWithFormat:@"%@%@.jpg", webServerPrefix, photoInfo.photoId];
-        //        NSURL *imageURL = [NSURL URLWithString: urlString];
-        //        NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:imageURL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0];
-        //        _connection = [[NSURLConnection alloc ] initWithRequest:theRequest delegate:self];
-        //
-        //        _receivedData = [[NSMutableData alloc ] init];
-        //
-        //        NSMutableDictionary *dataAndPhotoIndex = [[NSMutableDictionary alloc] init];
-        //        [dataAndPhotoIndex setObject:_receivedData forKey:[NSString stringWithFormat:@"%d", photoIndex]];
-        //        NSMutableDictionary *imageAndURL = [[NSMutableDictionary alloc] init];
-        //        [imageAndURL setObject:dataAndPhotoIndex forKey:urlString];
-        //        [_imageSet setObject:imageAndURL forKey:_connection.description];
-        //        dataAndPhotoIndex = nil;
-        //        imageAndURL = nil;
         [self sendGetPhotoDataRequest:urlString withPhotoIndex:photoIndex];
     }
     return;
@@ -295,22 +287,27 @@
     //   UIImageView *imageView = [[UIImageView alloc] initWithImage:imageTest];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
     //    UIImageView *imageView = [[UIImageView alloc] init];
-    CGFloat widthScale = image.size.width/self.scrollView.bounds.size.width;
-    CGFloat heightScale = image.size.height/self.scrollView.bounds.size.height;
+    float boundsWidth = self.scrollView.bounds.size.width;
+    float boundHeight = _scrollViewHight;
+//    if ((pageIndex == 0) || (pageIndex == 1)) {
+//        boundHeight = boundHeight - self.navigationController.navigationBar.frame.size.height;
+//    }
+    CGFloat widthScale = image.size.width/boundsWidth;
+    CGFloat heightScale = image.size.height/boundHeight;
     NSInteger newImageHeight, newImageWidth;
     if (widthScale>=heightScale) {
-        newImageHeight = self.scrollView.bounds.size.width*(image.size.height/image.size.width);
-        newImageWidth = self.scrollView.bounds.size.width;
+        newImageHeight = boundsWidth*(image.size.height/image.size.width);
+        newImageWidth = boundsWidth;
     }else{
-        newImageHeight = self.scrollView.bounds.size.height;
-        newImageWidth = self.scrollView.bounds.size.height*(image.size.width/image.size.height);
+        newImageHeight = boundHeight;
+        newImageWidth = boundHeight*(image.size.width/image.size.height);
     }
     
     image = [self resizeImage:image newSize:CGSizeMake(newImageWidth, newImageHeight)];
     if (widthScale>=heightScale) {
-        imageView.frame = CGRectMake(self.scrollView.bounds.size.width*pageIndex,(self.scrollView.bounds.size.height- newImageHeight)/2, newImageWidth, newImageHeight);
+        imageView.frame = CGRectMake(boundsWidth*pageIndex,(boundHeight- newImageHeight)/2, newImageWidth, newImageHeight);
     }else{
-        imageView.frame = CGRectMake(self.scrollView.bounds.size.width*pageIndex+(self.scrollView.bounds.size.width - newImageWidth)/2, 0, newImageWidth, newImageHeight);
+        imageView.frame = CGRectMake(boundsWidth*pageIndex+(boundsWidth - newImageWidth)/2, 0, newImageWidth, newImageHeight);
     }
     [_zoomView addSubview: imageView];
     imageView = nil;
@@ -400,6 +397,11 @@
     CLLocationCoordinate2D coordinate = {.latitude= self.lat, .longitude= self.lng};
     self.annotations = [self mapAnnotationwithCoordinate:coordinate];
     [self updateRegionWithCoordinate:coordinate];
+}
+
+-(void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
 }
 
 @end

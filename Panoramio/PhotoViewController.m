@@ -159,13 +159,13 @@
     photoTextInfo.text = nil;
 }
 
--(void) viewWillDisappear:(BOOL)animated
-{
-    //  [[self navigationController] popToViewController:obj animated:YES];
+//-(void) viewWillDisappear:(BOOL)animated
+//{
+//      [[self navigationController] popToViewController:obj animated:YES];
     
     //    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
     //   }
-}
+//}
 
 -(void) tapSharedButton
 {

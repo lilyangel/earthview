@@ -2,8 +2,8 @@
 //  PhotoOwner.h
 //  Panoramio
 //
-//  Created by fili on 1/3/13.
-//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
+//  Created by lily on 2/23/13.
+//
 //
 
 #import <Foundation/Foundation.h>

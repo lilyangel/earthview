@@ -69,7 +69,7 @@
     [fetchRequest setEntity:entity];
     
     // Create the sort descriptors array.
-    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"photoId" ascending:YES];
+    NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES];
     NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:descriptor, nil];
     [fetchRequest setSortDescriptors:sortDescriptors];
     

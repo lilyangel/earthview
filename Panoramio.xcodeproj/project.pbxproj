@@ -9,12 +9,9 @@
 /* Begin PBXBuildFile section */
 		2A029BC816C7552900E74DFF /* FavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A029BC716C7552900E74DFF /* FavoriteViewController.m */; };
 		2A029BD116C75F6100E74DFF /* ThumbNailSuperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A029BD016C75F6100E74DFF /* ThumbNailSuperViewController.m */; };
-		2A029BD616C84D9E00E74DFF /* PhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A029BD516C84D9E00E74DFF /* PhotoInfo.m */; };
-		2A08A47916A3DFDB0005359F /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A08A47816A3DFDB0005359F /* PhotoViewController.m */; };
 		2A08A48616A5E8FE0005359F /* PhotoScheme.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2A08A48516A5E8FE0005359F /* PhotoScheme.xcdatamodel */; };
 		2A08A48C16A5FD2A0005359F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A08A48B16A5FD2A0005359F /* MapViewController.m */; };
 		2A310D6D16D3418200102BA3 /* ActionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A310D6C16D3418200102BA3 /* ActionButton.png */; };
-		2A6EC24516D29CCF00C1AD8B /* PhotoInfo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2A6EC24416D29CCE00C1AD8B /* PhotoInfo.sqlite */; };
 		2A6EC24916D2C1A600C1AD8B /* GlobalConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6EC24816D2C1A600C1AD8B /* GlobalConfiguration.m */; };
 		2A84EFD816C9D17600E35F2C /* star_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EFD716C9D17600E35F2C /* star_small.png */; };
 		2A84EFE216C9EAD200E35F2C /* greyheart_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EFDE16C9EAD200E35F2C /* greyheart_s.png */; };
@@ -24,7 +21,6 @@
 		2AAE9B1816B89BBF0013F0E8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAE9B1716B89BBF0013F0E8 /* MessageUI.framework */; };
 		2AAEEFFB16B207520028215C /* greyheartSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEEFFA16B207520028215C /* greyheartSmall.png */; };
 		2AAEEFFE16B207630028215C /* redheartSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEEFFD16B207630028215C /* redheartSmall.png */; };
-		2AAEF00D16B72AE20028215C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAEF00C16B72AE20028215C /* FacebookSDK.framework */; };
 		2AAEF00F16B72BC10028215C /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEF00E16B72BC10028215C /* FacebookSDKResources.bundle */; };
 		2AAEF01116B72C300028215C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAEF01016B72C300028215C /* AdSupport.framework */; };
 		2AAEF01316B72C380028215C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAEF01216B72C380028215C /* Accounts.framework */; };
@@ -36,8 +32,17 @@
 		2AE6878D16C0CF740073AE48 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6878C16C0CF740073AE48 /* InfoPlist.strings */; };
 		2AE68F0C169FA58700148249 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE68F0B169FA58700148249 /* CoreLocation.framework */; };
 		2AE68F0F169FA5B500148249 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE68F0E169FA5B500148249 /* MapKit.framework */; };
-		2AE68F1116A08EF200148249 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE68F1016A08EF200148249 /* location.png */; };
 		2AE68F1616A0923600148249 /* pointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE68F1516A0923600148249 /* pointAnnotation.m */; };
+		2AEF936B16D5F88F00DD0584 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF936A16D5F88F00DD0584 /* location.png */; };
+		2AEF93BF16D749B200DD0584 /* FullSizePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF93BE16D749B200DD0584 /* FullSizePhotoViewController.m */; };
+		2AEF93C716D9521D00DD0584 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AEF93C616D9521D00DD0584 /* QuartzCore.framework */; };
+		2AEF93CD16D9772200DD0584 /* PhotoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF93CC16D9772200DD0584 /* PhotoInfo.m */; };
+		2AEF93D316D9778D00DD0584 /* PhotoOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF93D216D9778D00DD0584 /* PhotoOwner.m */; };
+		2AEF93D716DA943200DD0584 /* mapdropround.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF93D616DA943100DD0584 /* mapdropround.png */; };
+		2AEF93D916DA9D7D00DD0584 /* PhotoInfo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF93D816DA9D7C00DD0584 /* PhotoInfo.sqlite */; };
+		2AEF93E316DABFF400DD0584 /* greyheart.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF93E216DABFF400DD0584 /* greyheart.png */; };
+		2AEF93E616DBD0DC00DD0584 /* MapLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF93E516DBD0DB00DD0584 /* MapLocationViewController.m */; };
+		2AF1E71D16D5E2C900B3BDE5 /* icon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AF1E71C16D5E2C900B3BDE5 /* icon_2.png */; };
 		2CFF27B316964EED003F0CA5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF27B216964EED003F0CA5 /* UIKit.framework */; };
 		2CFF27B516964EED003F0CA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF27B416964EED003F0CA5 /* Foundation.framework */; };
 		2CFF27B716964EED003F0CA5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF27B616964EED003F0CA5 /* CoreGraphics.framework */; };
@@ -45,7 +50,6 @@
 		2CFF27C316964EEE003F0CA5 /* PlanetViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27C216964EEE003F0CA5 /* PlanetViewAppDelegate.m */; };
 		2CFF27C616964EEE003F0CA5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFF27C416964EEE003F0CA5 /* MainStoryboard.storyboard */; };
 		2CFF27D016964FBD003F0CA5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFF27CF16964FBD003F0CA5 /* CoreData.framework */; };
-		2CFF27D6169650AD003F0CA5 /* PhotoOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27D5169650AD003F0CA5 /* PhotoOwner.m */; };
 		2CFF27E7169655F3003F0CA5 /* ThumbNailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27E6169655F3003F0CA5 /* ThumbNailViewController.m */; };
 		2CFF27EA1696562B003F0CA5 /* ShowLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27E91696562B003F0CA5 /* ShowLocationViewController.m */; };
 		2CFF27ED16965756003F0CA5 /* FetchPhotoResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFF27EC16965756003F0CA5 /* FetchPhotoResult.m */; };
@@ -56,15 +60,10 @@
 		2A029BC716C7552900E74DFF /* FavoriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteViewController.m; sourceTree = "<group>"; };
 		2A029BCF16C75F6100E74DFF /* ThumbNailSuperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbNailSuperViewController.h; sourceTree = "<group>"; };
 		2A029BD016C75F6100E74DFF /* ThumbNailSuperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbNailSuperViewController.m; sourceTree = "<group>"; };
-		2A029BD416C84D9E00E74DFF /* PhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoInfo.h; sourceTree = "<group>"; };
-		2A029BD516C84D9E00E74DFF /* PhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoInfo.m; sourceTree = "<group>"; };
-		2A08A47716A3DFDB0005359F /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
-		2A08A47816A3DFDB0005359F /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		2A08A48516A5E8FE0005359F /* PhotoScheme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoScheme.xcdatamodel; sourceTree = "<group>"; };
 		2A08A48A16A5FD290005359F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		2A08A48B16A5FD2A0005359F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		2A310D6C16D3418200102BA3 /* ActionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionButton.png; sourceTree = "<group>"; };
-		2A6EC24416D29CCE00C1AD8B /* PhotoInfo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PhotoInfo.sqlite; sourceTree = "<group>"; };
 		2A6EC24716D2C1A600C1AD8B /* GlobalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConfiguration.h; sourceTree = "<group>"; };
 		2A6EC24816D2C1A600C1AD8B /* GlobalConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConfiguration.m; sourceTree = "<group>"; };
 		2A84EFD716C9D17600E35F2C /* star_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_small.png; sourceTree = "<group>"; };
@@ -89,9 +88,22 @@
 		2AE6878C16C0CF740073AE48 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		2AE68F0B169FA58700148249 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2AE68F0E169FA5B500148249 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		2AE68F1016A08EF200148249 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		2AE68F1416A0923600148249 /* pointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pointAnnotation.h; sourceTree = "<group>"; };
 		2AE68F1516A0923600148249 /* pointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pointAnnotation.m; sourceTree = "<group>"; };
+		2AEF936A16D5F88F00DD0584 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = ../../../Downloads/location.png; sourceTree = "<group>"; };
+		2AEF93BD16D749B200DD0584 /* FullSizePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullSizePhotoViewController.h; sourceTree = "<group>"; };
+		2AEF93BE16D749B200DD0584 /* FullSizePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullSizePhotoViewController.m; sourceTree = "<group>"; };
+		2AEF93C616D9521D00DD0584 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2AEF93CB16D9772100DD0584 /* PhotoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoInfo.h; sourceTree = "<group>"; };
+		2AEF93CC16D9772200DD0584 /* PhotoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoInfo.m; sourceTree = "<group>"; };
+		2AEF93D116D9778C00DD0584 /* PhotoOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoOwner.h; sourceTree = "<group>"; };
+		2AEF93D216D9778D00DD0584 /* PhotoOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoOwner.m; sourceTree = "<group>"; };
+		2AEF93D616DA943100DD0584 /* mapdropround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mapdropround.png; path = ../../../Downloads/mapdropround.png; sourceTree = "<group>"; };
+		2AEF93D816DA9D7C00DD0584 /* PhotoInfo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PhotoInfo.sqlite; sourceTree = "<group>"; };
+		2AEF93E216DABFF400DD0584 /* greyheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyheart.png; sourceTree = "<group>"; };
+		2AEF93E416DBD0DA00DD0584 /* MapLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLocationViewController.h; sourceTree = "<group>"; };
+		2AEF93E516DBD0DB00DD0584 /* MapLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLocationViewController.m; sourceTree = "<group>"; };
+		2AF1E71C16D5E2C900B3BDE5 /* icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_2.png; sourceTree = "<group>"; };
 		2CFF27AE16964EED003F0CA5 /* Panoramio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panoramio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFF27B216964EED003F0CA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2CFF27B416964EED003F0CA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,8 +114,6 @@
 		2CFF27C216964EEE003F0CA5 /* PlanetViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetViewAppDelegate.m; sourceTree = "<group>"; };
 		2CFF27C516964EEE003F0CA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2CFF27CF16964FBD003F0CA5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		2CFF27D4169650AD003F0CA5 /* PhotoOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoOwner.h; sourceTree = "<group>"; };
-		2CFF27D5169650AD003F0CA5 /* PhotoOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoOwner.m; sourceTree = "<group>"; };
 		2CFF27E5169655F3003F0CA5 /* ThumbNailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbNailViewController.h; sourceTree = "<group>"; };
 		2CFF27E6169655F3003F0CA5 /* ThumbNailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbNailViewController.m; sourceTree = "<group>"; };
 		2CFF27E81696562B003F0CA5 /* ShowLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowLocationViewController.h; path = ../ShowLocationViewController.h; sourceTree = "<group>"; };
@@ -117,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AEF93C716D9521D00DD0584 /* QuartzCore.framework in Frameworks */,
 				2AAEF01516B72C420028215C /* Social.framework in Frameworks */,
 				2AAE9B1816B89BBF0013F0E8 /* MessageUI.framework in Frameworks */,
 				2AAEF01316B72C380028215C /* Accounts.framework in Frameworks */,
@@ -127,7 +138,6 @@
 				2CFF27B316964EED003F0CA5 /* UIKit.framework in Frameworks */,
 				2CFF27B516964EED003F0CA5 /* Foundation.framework in Frameworks */,
 				2CFF27B716964EED003F0CA5 /* CoreGraphics.framework in Frameworks */,
-				2AAEF00D16B72AE20028215C /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +155,12 @@
 				2CFF27E6169655F3003F0CA5 /* ThumbNailViewController.m */,
 				2A029BC616C7552900E74DFF /* FavoriteViewController.h */,
 				2A029BC716C7552900E74DFF /* FavoriteViewController.m */,
+				2AEF93E416DBD0DA00DD0584 /* MapLocationViewController.h */,
+				2AEF93E516DBD0DB00DD0584 /* MapLocationViewController.m */,
 				2A029BCF16C75F6100E74DFF /* ThumbNailSuperViewController.h */,
 				2A029BD016C75F6100E74DFF /* ThumbNailSuperViewController.m */,
-				2A08A47716A3DFDB0005359F /* PhotoViewController.h */,
-				2A08A47816A3DFDB0005359F /* PhotoViewController.m */,
+				2AEF93BD16D749B200DD0584 /* FullSizePhotoViewController.h */,
+				2AEF93BE16D749B200DD0584 /* FullSizePhotoViewController.m */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -156,14 +168,14 @@
 		2A6EC24616D2C01E00C1AD8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2AEF93CB16D9772100DD0584 /* PhotoInfo.h */,
+				2AEF93CC16D9772200DD0584 /* PhotoInfo.m */,
+				2AEF93D116D9778C00DD0584 /* PhotoOwner.h */,
+				2AEF93D216D9778D00DD0584 /* PhotoOwner.m */,
 				2AE68F1416A0923600148249 /* pointAnnotation.h */,
 				2AE68F1516A0923600148249 /* pointAnnotation.m */,
-				2CFF27D4169650AD003F0CA5 /* PhotoOwner.h */,
-				2CFF27D5169650AD003F0CA5 /* PhotoOwner.m */,
 				2CFF27EB16965756003F0CA5 /* FetchPhotoResult.h */,
 				2CFF27EC16965756003F0CA5 /* FetchPhotoResult.m */,
-				2A029BD416C84D9E00E74DFF /* PhotoInfo.h */,
-				2A029BD516C84D9E00E74DFF /* PhotoInfo.m */,
 				2AD5EDF816CEFB9A003E08F6 /* LocalImageManager.h */,
 				2AD5EDF916CEFB9A003E08F6 /* LocalImageManager.m */,
 			);
@@ -182,6 +194,7 @@
 		2CFF27A316964EED003F0CA5 = {
 			isa = PBXGroup;
 			children = (
+				2AF1E71C16D5E2C900B3BDE5 /* icon_2.png */,
 				2AAE9B1716B89BBF0013F0E8 /* MessageUI.framework */,
 				2AAEF01416B72C420028215C /* Social.framework */,
 				2AAEF01216B72C380028215C /* Accounts.framework */,
@@ -207,6 +220,7 @@
 		2CFF27B116964EED003F0CA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AEF93C616D9521D00DD0584 /* QuartzCore.framework */,
 				2AAEF00E16B72BC10028215C /* FacebookSDKResources.bundle */,
 				2AAEF00C16B72AE20028215C /* FacebookSDK.framework */,
 				2CFF27B216964EED003F0CA5 /* UIKit.framework */,
@@ -219,6 +233,7 @@
 		2CFF27B816964EED003F0CA5 /* Panoramio */ = {
 			isa = PBXGroup;
 			children = (
+				2AEF93D816DA9D7C00DD0584 /* PhotoInfo.sqlite */,
 				2A591C3E16D45822009CBB58 /* Control */,
 				2A6EC24B16D2C25700C1AD8B /* Config */,
 				2A6EC24616D2C01E00C1AD8B /* Model */,
@@ -234,16 +249,17 @@
 		2CFF27B916964EED003F0CA5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2AEF93E216DABFF400DD0584 /* greyheart.png */,
 				2A84EFE916C9EF7100E35F2C /* MapDrop_s.png */,
+				2AEF93D616DA943100DD0584 /* mapdropround.png */,
 				2AE3B91316CAB12B008FAE37 /* arrow_down.png */,
 				2A84EFE716C9EEA300E35F2C /* MapDrop.png */,
 				2A310D6C16D3418200102BA3 /* ActionButton.png */,
 				2AE3B91116CAAAE0008FAE37 /* pin.png */,
+				2AEF936A16D5F88F00DD0584 /* location.png */,
 				2A84EFE516C9EE8700E35F2C /* globe_.png */,
 				2A84EFDE16C9EAD200E35F2C /* greyheart_s.png */,
 				2A84EFD716C9D17600E35F2C /* star_small.png */,
-				2A6EC24416D29CCE00C1AD8B /* PhotoInfo.sqlite */,
-				2AE68F1016A08EF200148249 /* location.png */,
 				2AAEEFFD16B207630028215C /* redheartSmall.png */,
 				2AAEEFFA16B207520028215C /* greyheartSmall.png */,
 				2CFF27BA16964EED003F0CA5 /* Panoramio-Info.plist */,
@@ -264,7 +280,6 @@
 				2CFF27AA16964EED003F0CA5 /* Sources */,
 				2CFF27AB16964EED003F0CA5 /* Frameworks */,
 				2CFF27AC16964EED003F0CA5 /* Resources */,
-				2A0B974D16C3114500ABB2FF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -308,7 +323,6 @@
 			files = (
 				2CFF27C616964EEE003F0CA5 /* MainStoryboard.storyboard in Resources */,
 				2AD1BA0716993744001593CD /* Default-568h@2x.png in Resources */,
-				2AE68F1116A08EF200148249 /* location.png in Resources */,
 				2AAEEFFB16B207520028215C /* greyheartSmall.png in Resources */,
 				2AAEEFFE16B207630028215C /* redheartSmall.png in Resources */,
 				2AAEF00F16B72BC10028215C /* FacebookSDKResources.bundle in Resources */,
@@ -320,28 +334,16 @@
 				2A84EFEA16C9EF7100E35F2C /* MapDrop_s.png in Resources */,
 				2AE3B91216CAAAE1008FAE37 /* pin.png in Resources */,
 				2AE3B91416CAB12B008FAE37 /* arrow_down.png in Resources */,
-				2A6EC24516D29CCF00C1AD8B /* PhotoInfo.sqlite in Resources */,
 				2A310D6D16D3418200102BA3 /* ActionButton.png in Resources */,
+				2AF1E71D16D5E2C900B3BDE5 /* icon_2.png in Resources */,
+				2AEF936B16D5F88F00DD0584 /* location.png in Resources */,
+				2AEF93D716DA943200DD0584 /* mapdropround.png in Resources */,
+				2AEF93D916DA9D7D00DD0584 /* PhotoInfo.sqlite in Resources */,
+				2AEF93E316DABFF400DD0584 /* greyheart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2A0B974D16C3114500ABB2FF /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ] || [ \"${PLATFORM_NAME}\" == \"ipados\" ]; then\n/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2CFF27AA16964EED003F0CA5 /* Sources */ = {
@@ -350,19 +352,20 @@
 			files = (
 				2CFF27BF16964EEE003F0CA5 /* main.m in Sources */,
 				2CFF27C316964EEE003F0CA5 /* PlanetViewAppDelegate.m in Sources */,
-				2CFF27D6169650AD003F0CA5 /* PhotoOwner.m in Sources */,
 				2CFF27E7169655F3003F0CA5 /* ThumbNailViewController.m in Sources */,
 				2CFF27EA1696562B003F0CA5 /* ShowLocationViewController.m in Sources */,
 				2CFF27ED16965756003F0CA5 /* FetchPhotoResult.m in Sources */,
 				2AE68F1616A0923600148249 /* pointAnnotation.m in Sources */,
-				2A08A47916A3DFDB0005359F /* PhotoViewController.m in Sources */,
 				2A08A48616A5E8FE0005359F /* PhotoScheme.xcdatamodel in Sources */,
 				2A08A48C16A5FD2A0005359F /* MapViewController.m in Sources */,
 				2A029BC816C7552900E74DFF /* FavoriteViewController.m in Sources */,
 				2A029BD116C75F6100E74DFF /* ThumbNailSuperViewController.m in Sources */,
-				2A029BD616C84D9E00E74DFF /* PhotoInfo.m in Sources */,
 				2AD5EDFA16CEFB9A003E08F6 /* LocalImageManager.m in Sources */,
 				2A6EC24916D2C1A600C1AD8B /* GlobalConfiguration.m in Sources */,
+				2AEF93BF16D749B200DD0584 /* FullSizePhotoViewController.m in Sources */,
+				2AEF93CD16D9772200DD0584 /* PhotoInfo.m in Sources */,
+				2AEF93D316D9778D00DD0584 /* PhotoOwner.m in Sources */,
+				2AEF93E616DBD0DC00DD0584 /* MapLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
