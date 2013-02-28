@@ -27,12 +27,12 @@
 @synthesize mapView = _mapView;
 
 - (void) updateMapView{
-    //    @synchronized(self.mapView.annotations){
-    if (self.mapView.annotations)
-        [self.mapView removeAnnotations: self.mapView.annotations];
-    if (self.annotations)
-        [self.mapView addAnnotations:self.annotations];
-    //    }
+    @synchronized(self.mapView.annotations){
+        if (self.mapView.annotations)
+            [self.mapView removeAnnotations: self.mapView.annotations];
+        if (self.annotations)
+            [self.mapView addAnnotations:self.annotations];
+    }
 }
 
 -(void) setMapView:(MKMapView *)mapView{
@@ -81,9 +81,6 @@
         PhotoInfo *photoInfo = [fetchedResultsController objectAtIndexPath:indexPath];
         coordinate.latitude = [photoInfo.latitude doubleValue];
         coordinate.longitude = [photoInfo.longtitude doubleValue];
-        //        UITapGestureRecognizer *imageTap = [[UITapGestureRecognizer alloc]
-        //                                            initWithTarget:self action:@selector(handleMapTap:)];
-        //        [self.mapView addGestureRecognizer:imageTap];
     }else{
         UIPinchGestureRecognizer* mapPinch = [[UIPinchGestureRecognizer alloc]
                                               initWithTarget:self action:@selector(handleMapChange:)];
@@ -108,7 +105,6 @@
 
 - (void)updateMap
 {
-    //dispatch_queue_t fetchQ = dispatch_queue_create("data fetcher", NULL);
     NSError *error;
     FetchPhotoResult *fetchPhoto = [[FetchPhotoResult alloc] init];
     fetchPhoto.photoId = _photoId;
@@ -217,7 +213,6 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:((pointAnnotation*)annotation).photoIndex inSection:0];
     PhotoInfo *annotationPhoto = [_fetchedResultsController objectAtIndexPath:indexPath];
     
-    //        NSData* imageData = [LocalImageManager getLocalImageByPhotoId: photoId];
     NSData* imageData = annotationPhoto.imageData;
     if (annotationPhoto.imageData != nil) {
         UIImage *image = [UIImage imageWithData:imageData];

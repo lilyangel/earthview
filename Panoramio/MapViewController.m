@@ -31,12 +31,12 @@ CLLocationManager* locationManager;
 @synthesize photoIndex = _photoIndex;
 
 - (void) updateMapView{
-    //    @synchronized(self.mapView.annotations){
-    if (self.mapView.annotations)
-        [self.mapView removeAnnotations: self.mapView.annotations];
-    if (self.annotations)
-        [self.mapView addAnnotations:self.annotations];
-    //    }
+    @synchronized(self.mapView.annotations){
+        if (self.mapView.annotations)
+            [self.mapView removeAnnotations: self.mapView.annotations];
+        if (self.annotations)
+            [self.mapView addAnnotations:self.annotations];
+    }
 }
 
 -(void) setMapView:(MKMapView *)mapView{
@@ -105,9 +105,7 @@ CLLocationManager* locationManager;
 }
 
 - (void)updateMap
-{
-    //dispatch_queue_t fetchQ = dispatch_queue_create("data fetcher", NULL);
-    
+{    
     CGPoint nePoint = CGPointMake(self.mapView.bounds.origin.x + self.mapView.bounds.size.width, self.mapView.bounds.origin.y);
     CGPoint swPoint = CGPointMake((self.mapView.bounds.origin.x), (self.mapView.bounds.origin.y + self.mapView.bounds.size.height));
     CLLocationCoordinate2D neCoord = [self.mapView convertPoint:nePoint toCoordinateFromView:self.mapView];
@@ -126,7 +124,6 @@ CLLocationManager* locationManager;
     }
     
     NSMutableArray *mutableAnnotations = [NSMutableArray array];
-    //dispatch_async(fetchQ, ^{
     int photoNumber = MIN(15, [[_fetchedResultsController fetchedObjects] count]);
     for(int i = 0;i<photoNumber;i++){
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
@@ -137,15 +134,11 @@ CLLocationManager* locationManager;
         pointAnnt.photoId = photoInfo.photoId;
         pointAnnt.photoIndex = i;
         pointAnnt.coordinate = coordinate;
-        //       [mutableAnnotations addObject:[pointAnnt annotationForPhotowithCoordinate:coordinate]];
         [mutableAnnotations addObject:pointAnnt];
         
     }
-    //    NSArray *inmutableAnnotations = [mutableAnnotations copy];
     self.annotations = mutableAnnotations;
     mutableAnnotations = nil;
-    //});
-    //    dispatch_release(fetchQ);
 }
 
 - (void)didReceiveMemoryWarning
@@ -231,7 +224,6 @@ CLLocationManager* locationManager;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:((pointAnnotation*)annotation).photoIndex inSection:0];
     PhotoInfo *annotationPhoto = [_fetchedResultsController objectAtIndexPath:indexPath];
     
-    //        NSData* imageData = [LocalImageManager getLocalImageByPhotoId: photoId];
     NSData* imageData = annotationPhoto.imageData;
     if (annotationPhoto.imageData != nil) {
         UIImage *image = [UIImage imageWithData:imageData];

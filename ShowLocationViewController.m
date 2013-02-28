@@ -62,10 +62,12 @@
 @synthesize scrollViewHight = _scrollViewHight;
 
 - (void) updateMapView{
-    if (self.mapView.annotations)
-        [self.mapView removeAnnotations: self.mapView.annotations];
-    if (self.annotations)
-        [self.mapView addAnnotations:self.annotations];
+    @synchronized(self.mapView.annotations){
+        if (self.mapView.annotations)
+            [self.mapView removeAnnotations: self.mapView.annotations];
+        if (self.annotations)
+            [self.mapView addAnnotations:self.annotations];
+    }
 }
 
 - (void) setMapView:(MKMapView *)mapView{
@@ -279,19 +281,9 @@
     if (image == nil) {
         return;
     }
-    
-    //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,     NSUserDomainMask, YES);
-    //    NSString *documentsDirectory = [paths objectAtIndex:0];
-    //    NSString *getImagePath = [NSString stringWithFormat:@"%@/100694.jpg",documentsDirectory];
-    //    UIImage *imageTest = [UIImage imageWithContentsOfFile:getImagePath];
-    //   UIImageView *imageView = [[UIImageView alloc] initWithImage:imageTest];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    //    UIImageView *imageView = [[UIImageView alloc] init];
     float boundsWidth = self.scrollView.bounds.size.width;
     float boundHeight = _scrollViewHight;
-//    if ((pageIndex == 0) || (pageIndex == 1)) {
-//        boundHeight = boundHeight - self.navigationController.navigationBar.frame.size.height;
-//    }
     CGFloat widthScale = image.size.width/boundsWidth;
     CGFloat heightScale = image.size.height/boundHeight;
     NSInteger newImageHeight, newImageWidth;

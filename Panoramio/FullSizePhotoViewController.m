@@ -62,7 +62,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    NSLog(@"%f %f", _scrollView.bounds.size.height, self.tabBarController.tabBar.bounds.size.height);
     _imageViewHeight = _scrollView.bounds.size.height;// - self.tabBarController.tabBar.bounds.size.height;
     self.scrollView.delegate=self;
     _photoCount = [[_fetchedResultsController fetchedObjects]count];
@@ -164,16 +163,11 @@
 {
     PlanetViewAppDelegate *pvDelegate = (((PlanetViewAppDelegate*) [UIApplication sharedApplication].delegate));
     NSError *error;
-    UIImage *favoriteImage;
-    UIButton *favButton = [[self.navigationItem.rightBarButtonItems objectAtIndex:4] customView];
     if ([_photoInfo.isFavorite intValue] == 1) {
         _photoInfo.isFavorite = [NSNumber numberWithInt:0];
-//        favoriteImage = [UIImage imageNamed:@"greyheartSmall.png"];
     }else{
         _photoInfo.isFavorite = [NSNumber numberWithInt:1];
-//        favoriteImage = [UIImage imageNamed:@"redheartSmall.png"];
     }
-//    [favButton setBackgroundImage:favoriteImage forState:UIControlStateNormal];
     if (![pvDelegate.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
@@ -249,11 +243,9 @@
 {
     if (self.navigationController.navigationBarHidden == YES) {
         [self.navigationController setNavigationBarHidden:NO animated:YES];
-//        photoTextInfo.text = _photoInfo.location;
         
     }else{
         [self.navigationController setNavigationBarHidden:YES animated:YES];
-//        photoTextInfo.text = nil;
     }
     
 }
@@ -308,6 +300,10 @@
         NSMutableDictionary *imageAndURL = [_imageSet objectForKey:connection.description];
         NSString *newUrlString = [NSString stringWithFormat:@"%@%@", [GlobalConfiguration settingNewWebServerPrefix], [photoIdStr objectAtIndex:1]];
         if ([urlString isEqualToString: newUrlString]) {
+            [[[UIAlertView alloc]
+              initWithTitle:@"Downloading Error" message:nil
+              delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]
+             show];
             return;
         }
         int index = [[[[[imageAndURL allValues] objectAtIndex:0] allKeys]objectAtIndex:0] intValue];
@@ -336,6 +332,10 @@
     theReceived = nil;
     connection = nil;
     NSLog(@"connection failed,ERROR %@", [error localizedDescription]);
+    [[[UIAlertView alloc]
+      initWithTitle:@"Downloading Error" message:nil
+      delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]
+     show];
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
@@ -403,13 +403,15 @@
         if ((_endPhotoIndex +1 < _photoCount) &&(_endPhotoIndex == _photoIndex)) {
             _endPhotoIndex++;
             [self imageAtIndex:_endPhotoIndex];
-            for (UIImageView *imageView in [_scrollView subviews]) {
-                float distance = imageView.frame.origin.x-5 - _scrollView.bounds.size.width * _beginPhotoIndex;
-                if ((distance<(float)10.0) && (distance > (float)(-10.0))) {
-                    [imageView removeFromSuperview];
-                    imageView.image = nil;
-                    _beginPhotoIndex++;
-                    break;
+            if (_photoIndex - _beginPhotoIndex >= 2) {
+                for (UIImageView *imageView in [_scrollView subviews]) {
+                    float distance = imageView.frame.origin.x-5 - _scrollView.bounds.size.width * _beginPhotoIndex;
+                    if ((distance<(float)10.0) && (distance > (float)(-10.0))) {
+                        [imageView removeFromSuperview];
+                        imageView.image = nil;
+                        _beginPhotoIndex++;
+                        break;
+                    }
                 }
             }
         }
@@ -424,13 +426,15 @@
         if ((_beginPhotoIndex - 1 >= 0)&&(_beginPhotoIndex == _photoIndex)) {
             _beginPhotoIndex--;
             [self imageAtIndex:_beginPhotoIndex];
-            for (UIImageView *imageView in [_scrollView subviews]) {
-                float distance = imageView.frame.origin.x-5 - _scrollView.bounds.size.width * _endPhotoIndex;
-                if ((distance<(float)10.0) && (distance > (float)(-10.0))) {
-                    [imageView removeFromSuperview];
-                    imageView.image = nil;
-                    _endPhotoIndex--;
-                    break;
+            if (_endPhotoIndex - _photoIndex >= 2) {
+                for (UIImageView *imageView in [_scrollView subviews]) {
+                    float distance = imageView.frame.origin.x-5 - _scrollView.bounds.size.width * _endPhotoIndex;
+                    if ((distance<(float)10.0) && (distance > (float)(-10.0))) {
+                        [imageView removeFromSuperview];
+                        imageView.image = nil;
+                        _endPhotoIndex--;
+                        break;
+                    }
                 }
             }
         }

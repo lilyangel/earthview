@@ -61,7 +61,6 @@
     if (coordinator != nil) {
         managedObjectContext = [NSManagedObjectContext new];
         [managedObjectContext setPersistentStoreCoordinator: coordinator];
-        //NSPersistentStore *temp= managedObjectContext.persistentStoreCoordinator.persistentStores;
     }
     return managedObjectContext;
 }
@@ -74,12 +73,6 @@
     NSURL *modelURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"PhotoScheme" ofType:@"mom"]];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
-    /*
-     if (managedObjectModel != nil) {
-     return managedObjectModel;
-     }
-     managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-     return managedObjectModel;*/
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
@@ -87,7 +80,6 @@
     if (persistentStoreCoordinator != nil) {
         return persistentStoreCoordinator;
     }
-    //    NSString *storePath = [[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"PhotoInfo" ofType:@"sqlite"]] absoluteString];
     
     NSString *storePath = [[[self applicationDocumentsDirectory] path] stringByAppendingPathComponent:@"PhotoInfo.sqlite"];
     
@@ -103,14 +95,7 @@
     NSURL *storeUrl = [NSURL fileURLWithPath:storePath];
     
     NSError *error;
-    //    NSManagedObjectModel *model = [self managedObjectModel];
     persistentStoreCoordinator =  [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
-    
-    //    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-    
-    //                         [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-    
-    //                         [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
     if (![persistentStoreCoordinator addPersistentStoreWithType: NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();

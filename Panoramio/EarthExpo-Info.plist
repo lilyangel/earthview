@@ -14,14 +14,14 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>icon_2.png</string>
+				<string>ExpoIcon.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>fili.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.fili99.earthexpo</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -45,8 +45,6 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>FacebookAppID</key>
-	<string>467315719995730</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>

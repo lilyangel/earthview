@@ -99,13 +99,11 @@
     CGPoint touchPoint=[gesture locationInView:_scrollView];
     
     int photoIndex = self.column * ((int)(touchPoint.y/(_imageHeight+1)))+((int)touchPoint.x/(_imageWidth+1));
-    //NSLog(@"%d, %f", photoIndex, touchPoint.y);
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:photoIndex inSection:0];
     [self fetchPhotoData];
     if (photoIndex < [[_fetchedResultsController fetchedObjects] count]) {
         PhotoInfo *photoInfo = [_fetchedResultsController objectAtIndexPath:indexPath];
         self.photoId = photoInfo.photoId;
-        //[self performSegueWithIdentifier:@"showPhotoDetail" sender:self];
         self.currentPhotoIndex = photoIndex;
         [self performSegueWithIdentifier:@"showFullPhoto" sender:self];
         
@@ -115,12 +113,7 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
- //   if ([segue.identifier isEqualToString:@"showPhotoDetail"]) {
     if ([segue.identifier isEqualToString:@"showFullPhoto"]) {
-//
-//        ShowLocationViewController *photoVC = segue.destinationViewController;
-//        photoVC.currentPhotoIndex = self.currentPhotoIndex;
-//        photoVC.photoId = self.photoId;
         FullSizePhotoViewController *fsPhotoVC = segue.destinationViewController;
         fsPhotoVC.fetchedResultsController = _fetchedResultsController;
         fsPhotoVC.photoIndex = self.currentPhotoIndex;
@@ -129,19 +122,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-    //[self downloadMoreImages:40];
-    //[self printPhotoWithPageIndex:0];
 }
 
 - (void)viewDidUnload
 {
     [self setScrollView:nil];
-    [super viewDidUnload];
-    for (UIImageView *tmpview in _scrollView.subviews){
-        [tmpview removeFromSuperview];
-    }
-    [_imageSet removeAllObjects];
     _imageSet = nil;
+    [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
@@ -150,7 +137,6 @@
     return NO;
 }
 
-//-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     _scrollBeginOffset = _scrollView.contentOffset.x;
@@ -218,7 +204,6 @@
 {
     //call NSURLConnection to start the download
     int printCount = MIN(self.row*self.column, [[_fetchedResultsController fetchedObjects]count]-self.row*self.column*self.currentListPage);
-    //    int printCount = frameSize*(self.currentListPage+1);
     if (printCount == self.row*self.column) {
         printCount = self.row*self.column*(self.currentListPage+1);
     }else{
@@ -228,23 +213,7 @@
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
         PhotoInfo *photoInfo = [_fetchedResultsController objectAtIndexPath:indexPath];
         NSString* urlString = [NSString stringWithFormat:@"%@%@.jpg", webServerPrefix, photoInfo.photoId];
-        //        if (photoInfo.imageData != nil) {
-        //            UIImageView *tmpsubView = [[_scrollView subviews] objectAtIndex:(index)];
-        //            tmpsubView.image = [UIImage imageWithData:photoInfo.imageData];
-        //        }else{
-        //        NSURL* imageURL = [NSURL URLWithString: urlString];
-        //        NSMutableURLRequest* theRequest = [NSMutableURLRequest requestWithURL:imageURL cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0];
-        //        _connection = [[NSURLConnection alloc ] initWithRequest:theRequest delegate:self];
-        //
-        //        _receivedData = [[NSMutableData alloc ] init];
-        //        //[_imageSet setObject:_receivedData forKey:urlString];
-        //        NSMutableDictionary* dataAndPhotoIndex = [[NSMutableDictionary alloc] init];
-        //        [dataAndPhotoIndex setObject:_receivedData forKey:[NSString stringWithFormat:@"%d", index]];
-        //        NSMutableDictionary* imageAndURL = [[NSMutableDictionary alloc] init];
-        //        [imageAndURL setObject:dataAndPhotoIndex forKey:urlString];
-        //        [_imageSet setObject:imageAndURL forKey:_connection.description];
         [self sendGetPhotoDataRequest:urlString withPhotoIndex:index];
-        //       }
     }
 }
 
@@ -255,7 +224,6 @@
     _connection = [[NSURLConnection alloc ] initWithRequest:theRequest delegate:self];
     
     _receivedData = [[NSMutableData alloc ] init];
-    //[_imageSet setObject:_receivedData forKey:urlString];
     NSMutableDictionary* dataAndPhotoIndex = [[NSMutableDictionary alloc] init];
     [dataAndPhotoIndex setObject:_receivedData forKey:[NSString stringWithFormat:@"%d", index]];
     NSMutableDictionary* imageAndURL = [[NSMutableDictionary alloc] init];
@@ -287,6 +255,7 @@
     NSMutableDictionary *imageAndRUL = [_imageSet objectForKey:connection.description];
     NSMutableData *theReceived = [[[imageAndRUL objectForKey:response.URL] allValues]objectAtIndex:0];
     [theReceived setLength:0];
+    
 }
 
 
@@ -346,7 +315,9 @@
     }
     
     int photoIndex = [[[[[imageAndURL allValues] objectAtIndex:0] allKeys]objectAtIndex:0] intValue];
-    
+    if (photoIndex >= [[_scrollView subviews]count]) {
+        return;
+    }
     UIImageView *tmpsubView = [[_scrollView subviews] objectAtIndex:(photoIndex)];
     if (tmpsubView != nil){
         tmpsubView.image = localimage;

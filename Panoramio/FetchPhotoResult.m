@@ -8,11 +8,6 @@
 
 #import "FetchPhotoResult.h"
 
-//@interface FetchPhotoResult()
-//@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-//@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-//@end
-
 @implementation FetchPhotoResult
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize fetchedResultsController = _fetchedResultsController;
@@ -27,7 +22,6 @@
     self = [super init];
     if (self != nil) {
         // initializations go here.
-        //   self.fetchedResultsController = [self fetchedResultsController];
     }
     return self;
 }
@@ -49,7 +43,6 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"PhotoInfo" inManagedObjectContext:self.managedObjectContext];
     if ((southWestLat != northEastLat)&&(southWestLng != northEastLng)) {
- //       fetchRequest.predicat
         if ((northEastLng - southWestLng) < 180.00) {
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"latitude < %f and latitude > %f and longtitude < %f and longtitude > %f", northEastLat , southWestLat, northEastLng, southWestLng];
             fetchRequest.predicate = predicate;

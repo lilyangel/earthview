@@ -20,5 +20,4 @@
 @property float southWestLat, southWestLng, northEastLat, northEastLng;
 @property Boolean isFavorite;
 @property NSString *photoId;
-//- (NSFetchedResultsController *)fetchedResultsController;
 @end

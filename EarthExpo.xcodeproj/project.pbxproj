@@ -13,6 +13,7 @@
 		2A08A48C16A5FD2A0005359F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A08A48B16A5FD2A0005359F /* MapViewController.m */; };
 		2A310D6D16D3418200102BA3 /* ActionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A310D6C16D3418200102BA3 /* ActionButton.png */; };
 		2A6EC24916D2C1A600C1AD8B /* GlobalConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6EC24816D2C1A600C1AD8B /* GlobalConfiguration.m */; };
+		2A73D39F16DE96AE00039689 /* ExpoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A73D39E16DE96AE00039689 /* ExpoIcon.png */; };
 		2A84EFD816C9D17600E35F2C /* star_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EFD716C9D17600E35F2C /* star_small.png */; };
 		2A84EFE216C9EAD200E35F2C /* greyheart_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EFDE16C9EAD200E35F2C /* greyheart_s.png */; };
 		2A84EFE616C9EE8700E35F2C /* globe_.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EFE516C9EE8700E35F2C /* globe_.png */; };
@@ -21,7 +22,6 @@
 		2AAE9B1816B89BBF0013F0E8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAE9B1716B89BBF0013F0E8 /* MessageUI.framework */; };
 		2AAEEFFB16B207520028215C /* greyheartSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEEFFA16B207520028215C /* greyheartSmall.png */; };
 		2AAEEFFE16B207630028215C /* redheartSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEEFFD16B207630028215C /* redheartSmall.png */; };
-		2AAEF00F16B72BC10028215C /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2AAEF00E16B72BC10028215C /* FacebookSDKResources.bundle */; };
 		2AAEF01116B72C300028215C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAEF01016B72C300028215C /* AdSupport.framework */; };
 		2AAEF01316B72C380028215C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAEF01216B72C380028215C /* Accounts.framework */; };
 		2AAEF01516B72C420028215C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAEF01416B72C420028215C /* Social.framework */; };
@@ -66,6 +66,7 @@
 		2A310D6C16D3418200102BA3 /* ActionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionButton.png; sourceTree = "<group>"; };
 		2A6EC24716D2C1A600C1AD8B /* GlobalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConfiguration.h; sourceTree = "<group>"; };
 		2A6EC24816D2C1A600C1AD8B /* GlobalConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalConfiguration.m; sourceTree = "<group>"; };
+		2A73D39E16DE96AE00039689 /* ExpoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExpoIcon.png; sourceTree = "<group>"; };
 		2A84EFD716C9D17600E35F2C /* star_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_small.png; sourceTree = "<group>"; };
 		2A84EFDE16C9EAD200E35F2C /* greyheart_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyheart_s.png; sourceTree = "<group>"; };
 		2A84EFE516C9EE8700E35F2C /* globe_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = globe_.png; path = ../../../Downloads/globe_.png; sourceTree = "<group>"; };
@@ -74,12 +75,10 @@
 		2AAE9B1716B89BBF0013F0E8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		2AAEEFFA16B207520028215C /* greyheartSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyheartSmall.png; sourceTree = "<group>"; };
 		2AAEEFFD16B207630028215C /* redheartSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redheartSmall.png; sourceTree = "<group>"; };
-		2AAEF00C16B72AE20028215C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		2AAEF00E16B72BC10028215C /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		2AAEF01016B72C300028215C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		2AAEF01216B72C380028215C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2AAEF01416B72C420028215C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		2ACB54CE16C0DC13002BD030 /* Panoramio-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Panoramio-Prefix.pch"; sourceTree = "<group>"; };
+		2ACB54CE16C0DC13002BD030 /* EarthExpo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EarthExpo-Prefix.pch"; sourceTree = "<group>"; };
 		2AD1BA0616993744001593CD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2AD5EDF816CEFB9A003E08F6 /* LocalImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalImageManager.h; sourceTree = "<group>"; };
 		2AD5EDF916CEFB9A003E08F6 /* LocalImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalImageManager.m; sourceTree = "<group>"; };
@@ -104,11 +103,11 @@
 		2AEF93E416DBD0DA00DD0584 /* MapLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLocationViewController.h; sourceTree = "<group>"; };
 		2AEF93E516DBD0DB00DD0584 /* MapLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLocationViewController.m; sourceTree = "<group>"; };
 		2AF1E71C16D5E2C900B3BDE5 /* icon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_2.png; sourceTree = "<group>"; };
-		2CFF27AE16964EED003F0CA5 /* Panoramio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panoramio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFF27AE16964EED003F0CA5 /* Panoramio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Panoramio.app; path = EarthExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFF27B216964EED003F0CA5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2CFF27B416964EED003F0CA5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CFF27B616964EED003F0CA5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2CFF27BA16964EED003F0CA5 /* Panoramio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Panoramio-Info.plist"; sourceTree = "<group>"; };
+		2CFF27BA16964EED003F0CA5 /* EarthExpo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EarthExpo-Info.plist"; sourceTree = "<group>"; };
 		2CFF27BE16964EED003F0CA5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CFF27C116964EEE003F0CA5 /* PlanetViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetViewAppDelegate.h; sourceTree = "<group>"; };
 		2CFF27C216964EEE003F0CA5 /* PlanetViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetViewAppDelegate.m; sourceTree = "<group>"; };
@@ -194,6 +193,7 @@
 		2CFF27A316964EED003F0CA5 = {
 			isa = PBXGroup;
 			children = (
+				2A73D39E16DE96AE00039689 /* ExpoIcon.png */,
 				2AF1E71C16D5E2C900B3BDE5 /* icon_2.png */,
 				2AAE9B1716B89BBF0013F0E8 /* MessageUI.framework */,
 				2AAEF01416B72C420028215C /* Social.framework */,
@@ -221,8 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				2AEF93C616D9521D00DD0584 /* QuartzCore.framework */,
-				2AAEF00E16B72BC10028215C /* FacebookSDKResources.bundle */,
-				2AAEF00C16B72AE20028215C /* FacebookSDK.framework */,
 				2CFF27B216964EED003F0CA5 /* UIKit.framework */,
 				2CFF27B416964EED003F0CA5 /* Foundation.framework */,
 				2CFF27B616964EED003F0CA5 /* CoreGraphics.framework */,
@@ -262,10 +260,10 @@
 				2A84EFD716C9D17600E35F2C /* star_small.png */,
 				2AAEEFFD16B207630028215C /* redheartSmall.png */,
 				2AAEEFFA16B207520028215C /* greyheartSmall.png */,
-				2CFF27BA16964EED003F0CA5 /* Panoramio-Info.plist */,
+				2CFF27BA16964EED003F0CA5 /* EarthExpo-Info.plist */,
 				2AE6878C16C0CF740073AE48 /* InfoPlist.strings */,
 				2CFF27BE16964EED003F0CA5 /* main.m */,
-				2ACB54CE16C0DC13002BD030 /* Panoramio-Prefix.pch */,
+				2ACB54CE16C0DC13002BD030 /* EarthExpo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -273,9 +271,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2CFF27AD16964EED003F0CA5 /* Panoramio */ = {
+		2CFF27AD16964EED003F0CA5 /* EarthExpo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CFF27CC16964EEE003F0CA5 /* Build configuration list for PBXNativeTarget "Panoramio" */;
+			buildConfigurationList = 2CFF27CC16964EEE003F0CA5 /* Build configuration list for PBXNativeTarget "EarthExpo" */;
 			buildPhases = (
 				2CFF27AA16964EED003F0CA5 /* Sources */,
 				2CFF27AB16964EED003F0CA5 /* Frameworks */,
@@ -285,7 +283,7 @@
 			);
 			dependencies = (
 			);
-			name = Panoramio;
+			name = EarthExpo;
 			productName = Panoramio;
 			productReference = 2CFF27AE16964EED003F0CA5 /* Panoramio.app */;
 			productType = "com.apple.product-type.application";
@@ -299,7 +297,7 @@
 				CLASSPREFIX = PlanetView;
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 2CFF27A816964EED003F0CA5 /* Build configuration list for PBXProject "Panoramio" */;
+			buildConfigurationList = 2CFF27A816964EED003F0CA5 /* Build configuration list for PBXProject "EarthExpo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -311,7 +309,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2CFF27AD16964EED003F0CA5 /* Panoramio */,
+				2CFF27AD16964EED003F0CA5 /* EarthExpo */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +323,6 @@
 				2AD1BA0716993744001593CD /* Default-568h@2x.png in Resources */,
 				2AAEEFFB16B207520028215C /* greyheartSmall.png in Resources */,
 				2AAEEFFE16B207630028215C /* redheartSmall.png in Resources */,
-				2AAEF00F16B72BC10028215C /* FacebookSDKResources.bundle in Resources */,
 				2AE6878D16C0CF740073AE48 /* InfoPlist.strings in Resources */,
 				2A84EFD816C9D17600E35F2C /* star_small.png in Resources */,
 				2A84EFE216C9EAD200E35F2C /* greyheart_s.png in Resources */,
@@ -340,6 +337,7 @@
 				2AEF93D716DA943200DD0584 /* mapdropround.png in Resources */,
 				2AEF93D916DA9D7D00DD0584 /* PhotoInfo.sqlite in Resources */,
 				2AEF93E316DABFF400DD0584 /* greyheart.png in Resources */,
+				2A73D39F16DE96AE00039689 /* ExpoIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,8 +416,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hui luo";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hui luo";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -433,6 +431,8 @@
 					"-fno-objc-arc=1",
 				);
 				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "A882B3DC-1EFE-4038-815F-56199AD59AF5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A882B3DC-1EFE-4038-815F-56199AD59AF5";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -446,10 +446,12 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panoramio/Panoramio-Prefix.pch";
-				INFOPLIST_FILE = "Panoramio/Panoramio-Info.plist";
+				GCC_PREFIX_HEADER = "Panoramio/EarthExpo-Prefix.pch";
+				INFOPLIST_FILE = "Panoramio/EarthExpo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lsqlite3.0";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EarthExpo;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -462,10 +464,12 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Panoramio/Panoramio-Prefix.pch";
-				INFOPLIST_FILE = "Panoramio/Panoramio-Info.plist";
+				GCC_PREFIX_HEADER = "Panoramio/EarthExpo-Prefix.pch";
+				INFOPLIST_FILE = "Panoramio/EarthExpo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lsqlite3.0";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EarthExpo;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -473,7 +477,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2CFF27A816964EED003F0CA5 /* Build configuration list for PBXProject "Panoramio" */ = {
+		2CFF27A816964EED003F0CA5 /* Build configuration list for PBXProject "EarthExpo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CFF27CA16964EEE003F0CA5 /* Debug */,
@@ -482,7 +486,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CFF27CC16964EEE003F0CA5 /* Build configuration list for PBXNativeTarget "Panoramio" */ = {
+		2CFF27CC16964EEE003F0CA5 /* Build configuration list for PBXNativeTarget "EarthExpo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2CFF27CD16964EEE003F0CA5 /* Debug */,
